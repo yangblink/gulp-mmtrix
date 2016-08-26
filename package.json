@@ -1,12 +1,12 @@
 {
   "name": "gulp-mmtrix",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "a gulp plugin for mmtrix who used to compress image",
   "main": "index.js",
   "scripts": {},
   "license": "MIT",
-  "homepage": "https://github.com/yqb1989/gulp-aliyun-oss",
-  "repository": "yqb1989/gulp-aliyun-oss",
+  "homepage": "https://github.com/yqb1989/gulp-mmtrix",
+  "repository": "yqb1989/gulp-mmtrix",
   "author": {
     "name": "yanglbink",
     "email": "yanglbink@gmail.com",
