@@ -1,6 +1,6 @@
 {
   "name": "gulp-mmtrix",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "a gulp plugin for mmtrix who used to compress image",
   "main": "index.js",
   "scripts": {},
@@ -28,5 +28,8 @@
     "request": "^2.74.0",
     "through2": "^2.0.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "mkdir": "0.0.2",
+    "rmdir": "^1.2.0"
+  }
 }
