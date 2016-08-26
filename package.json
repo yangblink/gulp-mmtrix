@@ -1,7 +1,7 @@
 {
   "name": "gulp-mmtrix",
-  "version": "0.1.0",
-  "description": "a gulp plugin for mmtrix [http://doc.mmtrix.com/api/imageopt.html] compress image",
+  "version": "0.1.2",
+  "description": "a gulp plugin for mmtrix who used to compress image",
   "main": "index.js",
   "scripts": {},
   "license": "MIT",
