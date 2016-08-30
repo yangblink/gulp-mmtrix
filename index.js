@@ -26,7 +26,7 @@ var download = function(uri, filename, complete){
 };
 
 // Plugin level function (dealing with files)
-function gulpPrefixer(options) {
+function gulpPrefixer(options, eventCall) {
 
   var accesskey = options.accesskey,
       securekey = options.securekey;
@@ -54,10 +54,13 @@ function gulpPrefixer(options) {
 
       // console.log('file name:', file.relative, file.contents.length);
 
-      mmtrix(reqOpt, file, ((data) => {
+      mmtrix(reqOpt, file, ((data, responseJson) => {
         gutil.log(PLUGIN_NAME + ': [compressing]', gutil.colors.green('✔ ') + file.relative + gutil.colors.gray(' (done)'));
         file.contents = data;
         this.push(file);
+        if(eventCall) {
+          eventCall(responseJson);
+        }
         return callback();
       }).bind(this) );
 
@@ -85,8 +88,9 @@ function mmtrix(reqOpt, file, cb) {
       if(body && body.code == 0) {
         var minurl = body.results[0].optImg.fdfsUrl;
         var filename = file.relative;
+        // gutil.log(PLUGIN_NAME, body, gutil.colors.green('now download'));2
         download(minurl, filename, (buf) => {
-            cb(buf);
+            cb(buf, body);
         });
       }
       else{

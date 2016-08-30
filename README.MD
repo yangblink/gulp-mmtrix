@@ -19,10 +19,14 @@ gulp.task('mmtrix', function() {
         securekey: securekey-from-mmtrix,
     }
     gulp.src('your/minify/img/**')
-        .pipe(mmtrix(opt))
+        .pipe(mmtrix(opt, function(data){
+            console.log(data)
+        }))
         .pipe(gulp.dest('/imagemin/'))
 })
 ```
 It will minify all you img to **/imagemin**
 
 `accesskey` and `securekey` is generate by [mmtrix](http://doc.mmtrix.com/api/imageopt.html)
+
+`data` is the response from [mmtrix](http://doc.mmtrix.com/api/imageopt.html)
