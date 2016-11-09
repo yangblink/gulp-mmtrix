@@ -25,11 +25,10 @@
   "dependencies": {
     "gulp-util": "^3.0.7",
     "md5": "^2.1.0",
+    "mkdir": "0.0.2",
     "request": "^2.74.0",
+    "rmdir": "^1.2.0",
     "through2": "^2.0.1"
   },
-  "devDependencies": {
-    "mkdir": "0.0.2",
-    "rmdir": "^1.2.0"
-  }
+  "devDependencies": {}
 }
