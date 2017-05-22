@@ -46,8 +46,6 @@ function gulpPrefixer(options, eventCall) {
       MD5_TOKEN = md5(securekey + file.contents);
 
       var reqOpt = {
-        // file: file.contents,
-        file: fs.createReadStream(file.path),
         accesskey: accesskey,
         md5: MD5_TOKEN,
       }
