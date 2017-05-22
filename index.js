@@ -78,7 +78,7 @@ function gulpPrefixer(options, eventCall) {
 };
 
 function mmtrix(reqOpt, file, cb) {
-  request({
+  var r = request({
     url: 'http://api.mmtrix.com/v1/imageoptimize/file',
     method: 'POST',
     formData: reqOpt,
@@ -100,7 +100,12 @@ function mmtrix(reqOpt, file, cb) {
     else{
       console.error(PLUGIN_NAME, err);
     }
-  })
+  });
+
+  var form = r.form();
+  form.append('file', file.contents, {filename: file.relative});
+  form.append('accesskey', reqOpt.accesskey)
+  form.append('md5', reqOpt.md5);
 }
 // Exporting the plugin main function
 module.exports = gulpPrefixer;
