@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {},
   "license": "MIT",
-  "homepage": "https://github.com/yqb1989/gulp-mmtrix",
-  "repository": "yqb1989/gulp-mmtrix",
+  "homepage": "https://github.com/yanglbink/gulp-mmtrix",
+  "repository": "yanglbink/gulp-mmtrix",
   "author": {
     "name": "yanglbink",
     "email": "yanglbink@gmail.com",
